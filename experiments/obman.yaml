@@ -1,0 +1,24 @@
+EXP: ddf
+
+DB:
+  NAME: obman
+  TESTNAME: obman
+  NUM_POINTS: 20000
+
+TRAIN:
+  EPOCH: 100
+
+MODEL:
+  BATCH_SIZE: 32
+  DDF:
+    th: False  # False: sigmoid; True: ReLU
+    DIMS: (512, 512, 512, 512, 512, 512, 512, 512, )
+    SKIP_IN: (4, )
+  ATTENTION: True
+  SAMPLE_GAP: 0.05
+  NUM_SAMPLE: 8
+  MULTI_HEAD: 2
+  ATTEN_MASK: False
+
+LOSS:
+  RECON: 5.

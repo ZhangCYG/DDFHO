@@ -1,0 +1,27 @@
+EXP: ddf
+
+DB:
+  NAME: mow
+  TESTNAME: mow
+  INPUT: rgba
+  NUM_POINTS: 20000
+
+SOLVER:
+  BASE_LR: 1.0e-5
+
+LOSS:
+  RECON: 5.
+
+TRAIN:
+  EVAL_EVERY: 10  # x5
+  EPOCH: 10  # 100,000
+
+MODEL:
+  BATCH_SIZE: 32
+  DDF:
+    th: False  # False: sigmoid; True: ReLU
+  ATTENTION: True
+  SAMPLE_GAP: 0.05
+  NUM_SAMPLE: 8
+  MULTI_HEAD: 2
+  ATTEN_MASK: False

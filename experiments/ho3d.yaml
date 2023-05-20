@@ -1,0 +1,27 @@
+EXP: ddf
+
+DB:
+  NAME: ho3d_vid
+  TESTNAME: ho3d_vid3fps
+  GT: plus
+  NUM_POINTS: 20000
+
+SOLVER:
+  BASE_LR: 1.0e-5
+
+TRAIN:
+  EPOCH: 100
+
+MODEL:
+  BATCH_SIZE: 32
+  DDF:
+    th: False  # False: sigmoid; True: ReLU
+  ATTENTION: True
+  SAMPLE_GAP: 0.05
+  NUM_SAMPLE: 8
+  MULTI_HEAD: 2
+  ATTEN_MASK: False
+
+LOSS:
+  RECON: 5.
+  
