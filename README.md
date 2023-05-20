@@ -22,6 +22,9 @@ data/
 database/
     ShapeNetCore.v2/
     YCBmodels/
+
+externals/
+    mano/
 ```
 
 ## Download
@@ -32,6 +35,8 @@ To keep the training and testing split with IHOI (https://github.com/JudyYe/ihoi
 `ho3d` is downloaded from https://www.tugraz.at/index.php?id=40231 (we use HO3D(v2)).
 
 `mow` is downloaded from https://zhec.github.io/rhoi/.
+
+`externals/mano` contains `MANO_LEFT.pkl` and `MANO_RIGHT.pkl`, get them from https://mano.is.tue.mpg.de/.
 
 ## DDF Preprocess
 First prepare `ShapeNetCore.v2` for ObMan dataset and `YCBmodels` (We get the YCB models from https://rse-lab.cs.washington.edu/projects/posecnn/) for HO3D(v2) dataset.
