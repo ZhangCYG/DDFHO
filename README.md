@@ -1,12 +1,16 @@
-# Installation
+# DDF-HO: Hand-Held Object Reconstruction via Conditional Directed Distance Field
+Chenyangguang Zhang, Yan Di, Ruida Zhang, Guangyao Zhai, Fabian Manhardt, Federico Tombari, Xiangyang Ji 
+in NeurIPS 2023
+
+## Installation
 ```
 conda env create -f docs/env.yaml
 conda activate ddfho
 ```
 
-# Data Preparation
+## Data Preparation
 
-## Folder Structure
+### Folder Structure
 ```
 data/
     cache/
@@ -27,7 +31,7 @@ externals/
     mano/
 ```
 
-## Download
+### Download
 To keep the training and testing split with IHOI (https://github.com/JudyYe/ihoi), we use their `cache` file (https://drive.google.com/drive/folders/1v6Pw6vrOGIg6HUEHMVhAQsn-JLBWSHWu?usp=sharing). Unzip it and put under `data/` folder.
 
 `obman` is downloaded from https://hassony2.github.io/obman.
@@ -38,7 +42,7 @@ To keep the training and testing split with IHOI (https://github.com/JudyYe/ihoi
 
 `externals/mano` contains `MANO_LEFT.pkl` and `MANO_RIGHT.pkl`, get them from https://mano.is.tue.mpg.de/.
 
-## DDF Preprocess
+### DDF Preprocess
 First prepare `ShapeNetCore.v2` for ObMan dataset and `YCBmodels` (We get the YCB models from https://rse-lab.cs.washington.edu/projects/posecnn/) for HO3D(v2) dataset.
 
 Then, run
@@ -49,14 +53,14 @@ python preprocess/process_mow.py
 ```
 and get processed DDF data under `processed_data`. You can make a soft link to `data/mesh_ddf/ddf_obj/`.
 
-# Train
+## Train
 ```
 python -m models.ddfho --config experiments/obman.yaml
 python -m models.ddfho--config experiments/ho3d.yaml  --ckpt PATH_TO_OBMAN_MODEL
 python -m models.ddfho--config experiments/mow.yaml  --ckpt PATH_TO_OBMAN_MODEL
 ```
 
-# Test
+## Test
 ```
 python -m models.ddfho --config experiments/obman.yaml --eval --ckpt PATH_TO_OBMAN_MODEL
 python -m models.ddfho --config experiments/ho3d.yaml --eval --ckpt PATH_TO_HO3D_MODEL
