@@ -53,6 +53,9 @@ python preprocess/process_mow.py
 ```
 and get processed DDF data under `processed_data`. You can make a soft link to `data/mesh_ddf/ddf_obj/`.
 
+## Pretrained Models
+We provide DDF-HO model pretrained on ObMan dataset (https://mailstsinghuaeducn-my.sharepoint.com/:f:/g/personal/zcyg22_mails_tsinghua_edu_cn/ErLUJGst6u9IlFUq4lS88XsB7eKExtCkhgLk2xtwSkuoBg?e=3LYO4F). Finetuning on HO3D and MOW datasets based on this model would be quick and convenient. 
+
 ## Train
 ```
 python -m models.ddfho --config experiments/obman.yaml
