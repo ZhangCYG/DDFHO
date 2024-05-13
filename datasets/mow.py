@@ -47,7 +47,7 @@ class MOW(BaseData):
         self.set_dir = osp.join(self.data_dir, '{}.lst')
         self.cache_file = osp.join(osp.dirname(self.data_dir), 'cache', '%s_%s.pkl' % (dataset, self.split))
         self.cache_mesh = osp.join(osp.dirname(self.data_dir), 'cache', '%s_%s_mesh.pkl' % (dataset, self.split))
-        self.mask_dir = osp.join(self.data_dir, 'results/{0}/{0}_mask.png')
+        self.mask_dir = ''
         self.image_dir = osp.join(self.data_dir, 'images/{0}.jpg')
         self.shape_dir = osp.join(self.data_dir, 'results/{0}/{0}_norm.obj')
 

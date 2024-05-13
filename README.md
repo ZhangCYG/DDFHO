@@ -53,6 +53,8 @@ python preprocess/process_mow.py
 ```
 and get processed DDF data under `processed_data`. You can make a soft link to `data/mesh_ddf/ddf_obj/`.
 
+MODIFICATION FOR TESTING: since in the testing stage, only uniform sampling is used, DDF preprocess scripts should be run seperately for training and testing stages. The default parameters are set for training. When preprocess testing samples, it needs to comment other sampling methods in the script except the uniform one.
+
 ## Pretrained Models
 We provide DDF-HO model pretrained on ObMan dataset (https://mailstsinghuaeducn-my.sharepoint.com/:f:/g/personal/zcyg22_mails_tsinghua_edu_cn/ErLUJGst6u9IlFUq4lS88XsB7eKExtCkhgLk2xtwSkuoBg?e=3LYO4F). Finetuning on HO3D and MOW datasets based on this model would be quick and convenient. 
 
